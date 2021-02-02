@@ -15,7 +15,7 @@ process fastqc {
  
     output:
     //file(fastq) into qc_files1
-    file("*_fastqc.{zip,html}") into qc_files1
+    //file("*_fastqc.{zip,html}") into qc_files1
     file fastq into fastq_files2
     file "*_fastqc.{zip,html}" into qc_files 
     """
