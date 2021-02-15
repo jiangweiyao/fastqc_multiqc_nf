@@ -23,7 +23,7 @@ process fastqc {
     """
 }
 
-qc_files1.collect().concat(fastq_files2.collect()).print()
+//qc_files1.collect().concat(fastq_files2.collect()).print()
 
 process multiqc {
 
