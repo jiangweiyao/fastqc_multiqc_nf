@@ -7,6 +7,8 @@ fastq_files = Channel.fromPath(params.in_files, type: 'file')
 
 process fastqc {
     
+    cpus 1 
+    memory '2 GB'   
     //publishDir params.out, mode: 'copy', overwrite: true
 
     //Note to self: specifying the file name literally coerces the input file into that name. It doesn't select files matching pattern of the literal.
@@ -27,6 +29,8 @@ process fastqc {
 
 process multiqc {
 
+    cpus 1
+    memory '2 GB'
     publishDir params.out_loc, mode: 'copy', overwrite: true
 
     input:
