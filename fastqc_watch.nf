@@ -3,12 +3,13 @@
 //params.in = "$baseDir/fastq/*.fastq.gz"
 //params.out = "$HOME/test"
 
-fastq_files = Channel.watchPath(params.in_files, type: 'file')
+fastq_files = Channel.watchPath(params.in)
+//fastq_files = Channel.fromPath(params.in)
 
 process fastqc {
     
     cpus 1 
-    memory '2 GB'   
+    memory 1.GB   
     publishDir params.out, mode: 'copy', overwrite: true, pattern: '*.{html}'
 
     //Note to self: specifying the file name literally coerces the input file into that name. It doesn't select files matching pattern of the literal.
