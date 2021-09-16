@@ -1,0 +1,1 @@
+{"in": "s3://jysequencebucket/fastq/*.fastq.gz", "out":"s3://jysequencebucket/output20210814"}

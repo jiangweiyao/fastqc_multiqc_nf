@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/jiangweiyao/fastqc_multiqc_nf/master/nextflow_schema.json",
+    "title": "Nextflow pipeline parameters",
+    "description": "This is a simple fastqc multiqc for testing and teaching",
+    "type": "object",
+    "properties": {
+        "in": {
+            "type": "string"
+            "default": "s3://jysequencebucket/fastq/*.fastq.gz"
+            "description": "folder containing fastq files for analysis"
+            "fa_icon": "fas fa-folder-open",
+        }
+        "out": {
+            "type": "string"
+            "default": "s3://jysequencebucket/output20210814"
+            "description": "output location of pipeline"
+            "fa_icon": "fas fa-folder-open",
+        }
+    }
+}
